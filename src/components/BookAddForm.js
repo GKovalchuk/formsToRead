@@ -18,7 +18,7 @@ function BookAddForm(props) {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<input name="name" value={form.name} onChange={handleChange} />
+			<input name="name" value={form.name} onChange={handleChange} placeholder="Add new book" />
 		</form>
 	);
 }

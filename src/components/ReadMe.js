@@ -4,7 +4,7 @@ import Filter from './Filter';
 import BookList from './BookList';
 import BookAddForm from './BookAddForm';
 
-function ReadMe(props) {
+function ReadMe() {
 	const [books, setBooks] = useState([]);
 	const [filter, setFilter] = useState('');
 
@@ -26,9 +26,9 @@ function ReadMe(props) {
 
 	return (
 		<React.Fragment>
+			<BookAddForm onAdd={handleAdd} />
 			<Filter onFilter={handleFilter} filter={filter} />
 			<BookList books={filtered} onRemove={handleRemove} onDone={handleDone} />
-			<BookAddForm onAdd={handleAdd} />
 		</React.Fragment>
 	)
 }

@@ -8,7 +8,9 @@ function Filter(props) {
 	}
 
 	return (
-		<input type="search" value={props.filter} onChange={handleFilter} />
+		<div>
+			<input type="search" value={props.filter} onChange={handleFilter} placeholder="Find а book" />
+		</div>
 	);
 }
 export default Filter;

@@ -5,7 +5,7 @@ function BookItem(props) {
 
 	return (
 		<li key={book.id}>
-			{book.read && 'check'} {book.name}
+			<p className='bookItem-title'>{book.read && 'check'} {book.name}</p>
 			<button onClick={() => handleDone(book.id)}> Done!</button>
 			<button onClick={() => handleRemove(book.id)}>Remove</button>
 		</li >
