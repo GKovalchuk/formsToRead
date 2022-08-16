@@ -1,0 +1,15 @@
+import React from 'react';
+
+function BookItem(props) {
+	const { book, onRemove: handleRemove, onDone: handleDone } = props;
+
+	return (
+		<li key={book.id}>
+			{book.read && 'check'} {book.name}
+			<button onClick={() => handleDone(book.id)}> Done!</button>
+			<button onClick={() => handleRemove(book.id)}>Remove</button>
+		</li >
+
+	);
+}
+export default BookItem;
